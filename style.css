@@ -1,0 +1,371 @@
+/* BODY */
+ul li a, ul {
+    text-decoration: none; /* Supprime le soulignement par défaut des liens (a) */
+    list-style-type: none; /* Supprime les puces ou numéros des listes (ul) */
+}
+
+
+
+/* HEADER */
+header{
+    display: flex; /* Organiser les éléments dans le header en un layout flexible */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si besoin*/
+    justify-content: space-between; /* Espace les éléments de manière égale*/
+}
+
+#recherche_conteneur{
+    margin-top: 2em; /* Ajoute un espace au-dessus du header*/
+}
+
+body>.container{
+    align-items: auto; /* Définit l'alignement des éléments*/
+}
+
+
+/* NAV */
+nav{
+    margin-top: 20px; /* Ajoute une marge de 20 pixels au-dessus de la balise <nav> */
+    margin-bottom: 20px; /* Ajoute une marge de 20 pixels en dessous de la balise <nav> */
+    background-color: blue; /* Définit la couleur de fond de la balise <nav> en bleu */
+}
+
+nav a{
+    text-decoration: none; /* Supprime la décoration par défaut des liens (souvent le soulignement) dans la balise <nav> */
+}
+
+nav ul {
+    display: flex; /* Utilise Flexbox pour afficher les éléments <ul> sous forme de flexbox */
+    flex-direction: row; /* Organise les éléments <li> à l'intérieur du <ul> en ligne horizontale */
+    padding: 0; /* Supprime le padding par défaut du <ul> */
+}
+
+nav>ul>li{
+    border: solid white; /* Ajoute une bordure blanche autour des éléments de la liste <li> */
+    text-align: center; /* Centre le texte à l'intérieur de chaque <li> */
+    position: relative; /* Positionne les éléments <li> de façon relative (utile pour un positionnement plus avancé) */
+    padding: 0; /* Supprime tout le padding interne du <li> */
+    padding-bottom: 0.2em; /* Ajoute un léger padding en bas de 0.2em (espacement interne) */
+    width: 100%; /* Prend toute la largeur disponible pour chaque élément <li> */
+}
+
+nav>ul>li>a{
+    display: block; /* Affiche le lien <a> comme un bloc pour qu'il prenne toute la largeur de l'élément parent */
+    background: radial-gradient(white, rgb(226, 247, 247)); /* Applique un dégradé radial avec du blanc au centre et une couleur bleu clair vers l'extérieur */
+    padding-top: 1rem; /* Ajoute un padding de 1 rem en haut du lien <a> */
+    padding-bottom: 1em; /* Ajoute un padding de 1em en bas du lien <a> */
+    width: auto; /* La largeur du lien <a> s'ajuste automatiquement à son contenu (ou à l'élément parent) */
+}
+
+nav>ul>li>ul /* sous-liste nav */ {
+    display: flex; /* Utilise Flexbox pour organiser les éléments de la sous-liste */
+    flex-direction: column; /* Affiche les éléments de la sous-liste verticalement (en colonne) */
+    position: absolute; /* Positionne la sous-liste de manière absolue par rapport à son parent <li> */
+    width: 100%; /* La sous-liste prend toute la largeur du parent <li> */
+    z-index: 10; /* Assure que la sous-liste s'affiche au-dessus des autres éléments avec une superposition (évite qu'elle soit cachée) */
+    background-color: white; /* Définit la couleur de fond de la sous-liste en blanc */
+    margin-top: 0.2em; /* Ajoute un léger espacement au-dessus de la sous-liste */
+    font-size: 0.9em; /* Réduit légèrement la taille de la police des éléments dans la sous-liste */
+}
+
+nav ul li ul li {
+    display: none; /* Cache les éléments <li> de la sous-liste par défaut */
+    text-align: start; /* Aligne le texte des éléments de la sous-liste à gauche */
+}
+
+nav ul li:hover>ul li {
+    display: block; /* Affiche les éléments <li> de la sous-liste quand on survole (hover) l'élément parent <li> */
+}
+
+
+/* UL SOLO sous nav */
+#solo {
+    padding: 0; /* Supprime le padding interne de l'élément avec l'ID 'solo' */
+    color: blue; /* Définit la couleur du texte de l'élément 'solo' en bleu */
+}
+
+#solo {
+    display: flex; /* Utilise Flexbox pour organiser le contenu de 'solo' en un layout flexible */
+    flex-direction: row; /* Aligne les éléments enfants de 'solo' en ligne horizontale (en rangée) */
+    list-style-type: none; /* Supprime les puces ou numéros par défaut des éléments de liste (si 'solo' est une liste) */
+}
+
+#solo li a {
+    text-decoration: none; /* Supprime la décoration (par défaut, le soulignement) des liens à l'intérieur des éléments <li> */
+}
+
+
+
+/* SECTION MAIN */
+section>main {
+    padding: 0; /* Supprime le padding interne du conteneur <main> à l'intérieur de <section> */
+}
+
+.row>* {
+    padding-left: 0; /* Supprime tout le padding à gauche des éléments enfants directs de la classe 'row' */
+}
+
+section>main>h1 {
+    font-size: 1.2em; /* Définit la taille de la police du titre <h1> à 1.2 fois la taille par défaut */
+    border: solid; /* Applique une bordure pleine autour du titre <h1> */
+    border-color: transparent; /* La couleur de la bordure est transparente, elle n'est donc pas visible */
+    border-radius: 20px 20px 0px 0px; /* Arrondit les coins supérieurs du titre <h1> avec un rayon de 20px */
+    background-color: blue; /* Définit la couleur de fond du titre en bleu */
+    padding: 0.2em; /* Ajoute un léger padding de 0.2em autour du texte du titre */
+    padding-left: 3em; /* Ajoute un padding plus grand à gauche du titre (3em) pour créer un espacement supplémentaire */
+    color: white; /* Définit la couleur du texte du titre en blanc */
+    text-transform: uppercase; /* Transforme tout le texte du titre en majuscules */
+    margin-block-end: 0; /* Supprime la marge par défaut à la fin du bloc <h1> */
+}
+
+#content {
+    border: solid; /* Applique une bordure pleine autour de l'élément avec l'ID 'content' */
+    padding-top: 1em; /* Ajoute un padding de 1em au-dessus de l'élément 'content' */
+    margin: 0; /* Supprime toute marge autour de l'élément 'content' */
+    margin-top: 0.4em; /* Ajoute une petite marge de 0.4em au-dessus de l'élément 'content' */
+    border-color: transparent; /* La bordure a une couleur transparente, donc elle n'est pas visible */
+    background-color: rgb(226, 247, 247); /* Définit la couleur de fond en un bleu très clair (RGB) */
+    border-radius: 0px 0px 25px 25px; /* Arrondit uniquement les coins inférieurs avec un rayon de 25px */
+    box-shadow: 0px 4px 2px rgb(177, 177, 177); /* Ajoute une ombre portée sous l'élément 'content', avec un décalage de 4px vers le bas et 2px horizontalement, en gris clair */
+}
+
+#content div>a {
+    display: flex; /* Utilise Flexbox pour organiser le contenu du lien <a> en un layout flexible */
+    align-items: center; /* Aligne les éléments à l'intérieur du lien <a> verticalement au centre */
+    height: 6em; /* Définit la hauteur du lien à 6em */
+    text-decoration: none; /* Supprime la décoration par défaut du lien (le soulignement) */
+    padding-bottom: 4em; /* Ajoute un padding (espace intérieur) de 4em en bas du lien */
+    padding-top: 1em; /* Ajoute un padding de 1em en haut du lien */
+}
+
+#content div>a>img {
+    margin-right: 1em; /* Ajoute une marge de 1em à droite de l'image à l'intérieur du lien <a> pour espacer l'image du texte ou des autres éléments */
+}
+
+#content>.col-lg-4 {
+    font-size: 0.7em; /* Réduit la taille de la police à 70 % de la taille par défaut dans les éléments avec la classe 'col-lg-4' */
+}
+
+#content>.col-lg-4 ul {
+    display: flex; /* Utilise Flexbox pour organiser la liste <ul> en un layout flexible */
+    flex-direction: column; /* Dispose les éléments de la liste en colonne (verticalement) */
+    padding: 0; /* Supprime le padding par défaut autour de la liste <ul> */
+}
+
+
+
+
+/* ASIDE */
+aside h3 {
+    font-size: 1.2em; /* Définit la taille de la police du titre <h3> à 1,2 fois la taille par défaut */
+    border: solid; /* Applique une bordure pleine autour de l'élément <h3> */
+    border-color: transparent; /* La couleur de la bordure est transparente, donc elle est invisible */
+    border-radius: 20px 20px 0px 0px; /* Arrondit uniquement les coins supérieurs du <h3> avec un rayon de 20px */
+    background-color: blue; /* Définit une couleur de fond bleue pour l'élément <h3> */
+    padding: 0.2em; /* Ajoute un léger padding interne de 0.2em autour du texte de <h3> */
+    padding-left: 1em; /* Ajoute un padding à gauche de 1em pour espacer le texte du bord gauche */
+    color: white; /* Définit la couleur du texte du <h3> en blanc */
+    width: auto; /* La largeur s'adapte au contenu ou au parent */
+    margin: 0; /* Supprime toute marge externe autour du <h3> */
+    text-align: start; /* Aligne le texte à gauche */
+}
+
+#numUn {
+    margin-bottom: 1em; /* Ajoute une marge de 1em en bas de l'élément avec l'ID 'numUn' */
+}
+
+#numUn>div, #numDe>div {
+    border: solid; /* Applique une bordure pleine autour des éléments <div> à l'intérieur de #numUn et #numDe */
+    border-color: transparent; /* La bordure est invisible (couleur transparente) */
+    background-color: rgb(226, 247, 247); /* Définit une couleur de fond bleu très clair pour les <div> */
+    border-radius: 0px 0px 25px 25px; /* Arrondit uniquement les coins inférieurs des <div> avec un rayon de 25px */
+    box-shadow: 0px 4px 2px rgb(177, 177, 177); /* Ajoute une ombre avec un décalage de 4px en bas et 2px horizontalement, en gris clair */
+}
+
+#numUn>div>ul {
+    padding: 0; /* Supprime tout le padding interne de la liste <ul> */
+    font-size: 0.9em; /* Réduit légèrement la taille de la police des éléments de la liste */
+    text-align: start; /* Aligne le texte de la liste à gauche */
+}
+
+#numUn>div>ul>li {
+    padding: 1em; /* Ajoute un padding interne de 1em autour de chaque élément de liste <li> */
+    text-align: start; /* Aligne le texte de chaque élément de liste à gauche */
+}
+
+#numUn>div>ul>li>a {
+    text-decoration: none; /* Supprime la décoration par défaut des liens (pas de soulignement) dans chaque élément de liste */
+    color: rgb(68, 66, 66); /* Définit la couleur du texte du lien à une teinte gris foncé */
+}
+
+#numUn>div>div {
+    text-align: end; /* Aligne le contenu de l'élément <div> à droite (à la fin de la ligne) */
+    width: 95%; /* Définit la largeur du <div> à 95 % de l'élément parent */
+}
+
+#numUn>div>div>a {
+    text-decoration: none; /* Supprime la décoration par défaut du lien à l'intérieur du <div> */
+}
+
+
+
+/* Part2 */
+#numDe > h3 {
+    background-color: rgb(160, 43, 1); /* Définit un fond rouge foncé pour le titre h3 */
+    text-transform: uppercase; /* Transforme le texte en majuscules pour le titre */
+}
+
+#numDe > div {
+    background-color: rgb(226, 247, 247); /* Définit un fond bleu clair pour le conteneur des actualités */
+    padding: 1em; /* Ajoute un padding interne de 1em autour du contenu du div */
+}
+
+#numDe > div > ul {
+    display: flex; /* Utilise Flexbox pour la mise en forme de la liste */
+    flex-direction: column; /* Dispose les éléments de la liste en colonne (verticalement) */
+    font-size: 0.9em; /* Réduit légèrement la taille de la police des éléments de la liste */
+    padding: 0.3em; /* Ajoute un padding interne de 0.3em autour de la liste */
+    padding-top: 1em; /* Ajoute un padding supplémentaire de 1em en haut de la liste */
+}
+
+#numDe > div > ul > li {
+    margin-bottom: 0.5em; /* Ajoute une marge de 0.5em en bas de chaque élément de la liste pour espacer les éléments */
+}
+
+#numDe > div > ul > li > a {
+    color: rgb(68, 66, 66); /* Définit la couleur des liens dans les éléments de la liste à un gris foncé */
+}
+
+#numDe > div > ul span, #numDe > div > div > a {
+    color: rgb(160, 43, 1); /* Définit la couleur des éléments span (dates) et des liens à l'intérieur du div à un rouge foncé */
+}
+
+#numDe > div > div {
+    text-align: end; /* Aligne le contenu du div à droite (fin de ligne) */
+}
+
+#numDe > div > div > a {
+    text-decoration: none; /* Supprime la décoration par défaut (soulignement) des liens à l'intérieur du div */
+}
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(2, 134, 185); /* Définit une couleur de fond bleu pour le footer */
+    margin-top: 1em; /* Ajoute une marge de 1em en haut du footer pour le séparer des éléments au-dessus */
+    margin-bottom: 2em; /* Ajoute une marge de 2em en bas du footer pour le séparer des éléments en dessous */
+    padding-top: 1em; /* Ajoute un padding interne de 1em en haut du footer */
+    border-radius: 0px 0px 15px 15px; /* Arrondit les coins inférieurs du footer avec un rayon de 15px */
+}
+
+footer > div > ul > #logo {
+    margin-top: 0; /* Supprime la marge supérieure pour l'élément avec l'ID 'logo' dans la liste du footer */
+}
+
+footer .col-lg-2 > ul {
+    padding: 0; /* Supprime tout padding interne pour la liste dans la colonne du footer */
+    list-style-type: disc; /* Définit le type de liste à disques (puces) pour les éléments de liste */
+}
+
+footer .col-lg-2 > ul > li {
+    text-align: start; /* Aligne le texte des éléments de la liste à gauche */
+    margin-left: 1em; /* Ajoute une marge à gauche de 1em pour espacer les éléments de liste du bord */
+}
+
+footer .col-lg-2 > ul > li > a {
+    color: white; /* Définit la couleur du texte des liens dans les éléments de la liste à blanc */
+}
+
+footer .col-lg-2 > ul > li::marker {
+    color: rgb(3, 90, 148); /* Change la couleur des puces (marqueurs) des éléments de la liste à une teinte bleu foncé */
+}
+
+footer .col-lg-2 {
+    margin-right: 1em; /* Ajoute une marge de 1em à droite de la colonne pour espacer les colonnes du footer */
+}
+
+footer .col-lg-2 > p {
+    text-align: start; /* Aligne le texte des paragraphes à gauche */
+    color: white; /* Définit la couleur du texte des paragraphes à blanc */
+}
+footer #fin {
+    background-color: rgb(1, 1, 80); /* Définit une couleur de fond bleu très foncé pour la section #fin dans le footer */
+    border: solid; /* Applique une bordure solide autour de l'élément #fin */
+    border-radius: 0px 0px 15px 15px; /* Arrondit les coins inférieurs de l'élément #fin avec un rayon de 15px */
+    border-color: transparent; /* Définit la couleur de la bordure à transparente, rendant ainsi la bordure invisible */
+    padding: 1em; /* Ajoute un padding interne de 1em autour du contenu de #fin */
+    text-align: center; /* Centre le texte à l'intérieur de l'élément #fin */
+}
+
+footer #fin > a {
+    text-decoration: none; /* Supprime la décoration par défaut (soulignement) des liens à l'intérieur de #fin */
+    color: white; /* Définit la couleur du texte des liens à blanc pour assurer une bonne visibilité sur le fond foncé */
+}
+
+
+
+
+
+/* MEDIA */
+@media (max-width:992px){
+    #content {
+        margin-bottom: 1em; /* Ajoute un espace de 1em en dessous de l'élément avec l'ID "content" pour séparer visuellement cet élément des éléments suivants. */
+    }     
+}
+
+/* MEDIA */
+@media (max-width: 767px) {
+    /* HEADER */
+    header {
+        display: flex; /* Utilise Flexbox pour la mise en page */
+        flex-direction: column; /* Organise les éléments enfants en colonne */
+        align-items: center; /* Centre les éléments horizontalement */
+    }
+
+    /* NAV */
+    nav ul {
+        display: flex; /* Utilise Flexbox pour organiser les éléments de la liste */
+        flex-direction: column; /* Aligne les éléments en colonne */
+        list-style: none; /* Supprime les puces de la liste */
+        padding: 0; /* Supprime le padding par défaut */
+    }
+    
+    nav > ul > li {
+        border: solid white; /* Ajoute une bordure blanche autour des éléments de la liste */
+        text-align: center; /* Centre le texte à l'intérieur des éléments de la liste */
+        position: relative; /* Positionne l'élément relativement à son positionnement normal */
+        padding: 0; /* Supprime le padding interne */
+        padding-bottom: 0.2em; /* Ajoute un espace en bas de l'élément */
+    }
+
+    /* FOOTER */
+    footer > div > ul {
+        display: flex; /* Utilise Flexbox pour la mise en page */
+        justify-content: center; /* Centre les éléments horizontalement dans le footer */
+        align-items: center; /* Centre les éléments verticalement si nécessaire */
+        padding: 0; /* Supprime le padding du ul */
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si l'espace est insuffisant */
+    }
+
+    ul.row > li {
+        margin-bottom: 1em; /* Ajoute un espacement de 1em entre les éléments de la liste */
+        display: flex; /* Utilise Flexbox pour l'élément de la liste */
+        flex-direction: column; /* Aligne les sous-éléments en colonne */
+        align-items: center; /* Centre les sous-éléments horizontalement */
+    }
+
+    ul.row > li ul {
+        padding: 0; /* Supprime le padding des sous-listes */
+    }
+
+    footer .col-lg-2 > ul {
+        padding: 0; /* Supprime le padding des listes dans le footer */
+        list-style-type: disc; /* Affiche des puces pour les listes */
+    }
+
+    footer .col-lg-2 > ul > li::marker {
+        color: rgb(3, 90, 148); /* Change la couleur des puces en bleu */
+    }
+}
+

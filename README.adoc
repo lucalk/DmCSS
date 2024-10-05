@@ -5,8 +5,8 @@ Luca KIUSI
 
 == Liens
 
-- GitHub : https://lucalk.github.io/DmCSS/
-- Site : https://github.com/lucalk/DmCSS
+- Site : https://lucalk.github.io/DmCSS/
+- GitHub : https://github.com/lucalk/DmCSS
 
 
 == Introduction

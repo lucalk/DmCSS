@@ -136,5 +136,9 @@ image::imgCR/footer.png[]
 
 
 == 8. Responsive
-===
+=== Media 1
+image::imgCR/media1.png[]
+
+=== Media 2
+image::imgCR/media2.png[]
 

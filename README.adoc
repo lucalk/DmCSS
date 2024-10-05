@@ -10,7 +10,7 @@ Luca KIUSI
 
 
 == Introduction
-Le projet avait pour but de faire une page HTML et d'y appliquer un style CSS pour que la page ressemble à cette page.
+Le projet avait pour but de faire une page HTML et d'y appliquer un style CSS pour reproduire cette image.
 
 image::/imgCR/screen_2022.png[]
 

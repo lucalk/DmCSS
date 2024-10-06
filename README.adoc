@@ -11,7 +11,7 @@ Luca KIUSI
 
 == Introduction
 Le projet avait pour but de faire une page HTML et d'y appliquer un style CSS pour reproduire cette image.
-Toutes les parties utilisent Bootstrap faut le ulSolo.
+Toutes les parties utilisent Bootstrap sauf le ulSolo.
 
 image::/imgCR/screen_2022.png[]
 
